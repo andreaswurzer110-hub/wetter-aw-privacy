@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutzerklärung – Wetter AW</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+      max-width: 760px; margin: 0 auto; padding: 24px 18px 64px;
+      line-height: 1.6; color: #1a1a1a; background: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6e6e6; background: #121212; }
+      a { color: #8cc4f2; }
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 4px; }
+    h2 { font-size: 1.2rem; margin-top: 32px; border-bottom: 1px solid #8884; padding-bottom: 4px; }
+    .stand { color: #8a8a8a; font-size: 0.9rem; margin-top: 0; }
+    code { background: #8882; padding: 1px 5px; border-radius: 4px; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Datenschutzerklärung – Wetter AW</h1>
+  <p class="stand">Stand: 30. September 2026</p>
+
+  <p>
+    Wetter AW ist eine Wetter-App mit Vorhersage, Regenradar und
+    Modellvergleich für Android, Windows und Linux. Diese Erklärung beschreibt,
+    welche Daten die App verarbeitet. Die App ist bewusst datensparsam: Es gibt
+    keine Werbung, kein Tracking, keine Analyse-Dienste und kein Konto beim
+    Anbieter.
+  </p>
+
+  <h2>Verantwortlicher</h2>
+  <p>
+    Andreas Wurzer, Österreich<br>
+    Kontakt: <a href="mailto:andi-w-apps@tuta.com">andi-w-apps@tuta.com</a>
+  </p>
+
+  <h2>Welche Daten verarbeitet werden</h2>
+  <ul>
+    <li>
+      <strong>Deine Orte und Einstellungen</strong> (gespeicherte Orte, Aufbau
+      der Startseite, Einheiten, Design, Radar-Zeitraum, Auswahl der
+      Wettermodelle) werden <strong>lokal auf deinem Gerät</strong>
+      gespeichert, ebenso die zuletzt geladene Vorhersage.
+    </li>
+    <li>
+      <strong>Ungefährer Standort:</strong> nur, wenn du „Meinen Standort
+      verwenden" wählst. Die App fordert unter Android ausschließlich den
+      ungefähren Standort an und rundet ihn auf etwa einen Kilometer, bevor sie
+      damit das Wetter abfragt. Der Standort wird nicht an den Anbieter
+      übertragen und nicht mit anderen Geräten abgeglichen.
+    </li>
+    <li>
+      <strong>Google-Konto-Daten</strong> (E-Mail-Adresse): nur, wenn du dich
+      freiwillig für den Abgleich zwischen deinen Geräten anmeldest. Die App
+      zeigt sie ausschließlich an, damit du siehst, mit welchem Konto du
+      angemeldet bist.
+    </li>
+    <li>
+      <strong>Abgleichsdaten:</strong> Bei aktivem Abgleich werden deine
+      gespeicherten Orte und Einstellungen in <strong>deinem eigenen Google
+      Drive</strong> abgelegt, und zwar in einem versteckten Ordner, der nur für
+      diese App bestimmt ist. Die App nutzt dafür ausschließlich die
+      Berechtigung <code>drive.appdata</code>. Auf deine übrigen Dateien in
+      Google Drive hat sie <strong>keinen Zugriff</strong>.
+    </li>
+  </ul>
+
+  <h2>Wo die Daten liegen</h2>
+  <p>
+    Deine Orte und Einstellungen bleiben auf deinem Gerät und, falls du den
+    Abgleich aktivierst, in deinem persönlichen Google Drive unter deiner
+    eigenen Kontrolle. <strong>Es gibt keinen eigenen Server</strong> des
+    Anbieters. Der Anbieter erhält keine deiner Daten.
+  </p>
+
+  <h2>Wetterdienste und Karten</h2>
+  <p>
+    Um Wetterdaten, Radarbilder und Karten zu laden, ruft die App direkt die
+    folgenden Dienste auf. Dabei wird, wie bei jedem Aufruf einer Webseite,
+    deine IP-Adresse an den jeweiligen Dienst übertragen. Übermittelt werden
+    außerdem nur die Angaben, die für die jeweilige Abfrage nötig sind:
+  </p>
+  <ul>
+    <li>
+      <strong>Open-Meteo</strong> (<code>open-meteo.com</code>, Schweiz):
+      Koordinaten des gewählten Ortes für Vorhersage, Modellvergleich und
+      Pollenflug; bei der Ortssuche der eingegebene Suchbegriff.
+    </li>
+    <li>
+      <strong>GeoSphere Austria</strong> (<code>data.hub.geosphere.at</code>):
+      Koordinaten des gewählten Ortes für die Niederschlagsvorhersage der
+      nächsten Stunden, nur für Orte in und um Österreich.
+    </li>
+    <li>
+      <strong>EUMETNET OPERA</strong> über den Speicherdienst CloudFerro
+      (<code>s3.waw3-1.cloudferro.com</code>): Radarbilder. Übermittelt wird
+      nur, welcher Kartenausschnitt geladen wird.
+    </li>
+    <li>
+      <strong>OpenStreetMap</strong> (<code>tile.openstreetmap.org</code>):
+      Kartenbilder für den sichtbaren Kartenausschnitt.
+    </li>
+    <li>
+      <strong>Nominatim / OpenStreetMap</strong>
+      (<code>nominatim.openstreetmap.org</code>): der gerundete Standort, um
+      den Ortsnamen dazu zu finden — nur bei „Mein Standort".
+    </li>
+    <li>
+      <strong>Google</strong> (Anmeldung und Google Drive): nur bei
+      aktiviertem Abgleich.
+    </li>
+  </ul>
+  <p>
+    Für diese Dienste gelten zusätzlich deren eigene Datenschutzbestimmungen.
+    Links zu den Datenquellen öffnen sich in deinem Browser.
+  </p>
+
+  <h2>Weitergabe an Dritte</h2>
+  <p>
+    Außer den oben genannten Abfragen, die für die Funktion der App nötig sind,
+    findet <strong>keine Weitergabe</strong> deiner Daten an Dritte statt. Es
+    werden keine Daten verkauft. Die Nutzung von Google Sign-In und Google
+    Drive unterliegt zusätzlich der
+    <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>.
+  </p>
+
+  <h2>Berechtigungen</h2>
+  <ul>
+    <li><strong>Internet/Netzwerkzugriff:</strong> zum Laden von Wetterdaten, Radarbildern und Karten sowie für den Abgleich mit Google Drive.</li>
+    <li><strong>Ungefährer Standort:</strong> nur, wenn du „Meinen Standort verwenden" wählst.</li>
+    <li><strong>Google-Konto:</strong> nur bei aktivierter Anmeldung für den Abgleich.</li>
+  </ul>
+
+  <h2>Speicherdauer und Löschung</h2>
+  <ul>
+    <li>Orte und Einstellungen bleiben gespeichert, bis du sie in der App änderst oder die App deinstallierst.</li>
+    <li>In den Einstellungen der App kannst du dich vom Abgleich abmelden.</li>
+    <li>
+      Die Abgleichsdaten in deinem Google Drive löschst du unter
+      <a href="https://drive.google.com/drive/settings">Google Drive →
+      Einstellungen → Apps verwalten</a> → Wetter AW → „Ausgeblendete
+      App-Daten löschen".
+    </li>
+    <li>
+      Den Zugriff der App auf dein Google-Konto kannst du vollständig entziehen
+      unter <a href="https://myaccount.google.com/permissions">Google-Konto →
+      Sicherheit → Drittanbieter-Apps</a>.
+    </li>
+  </ul>
+
+  <h2>Kinder</h2>
+  <p>Die App richtet sich nicht gezielt an Kinder.</p>
+
+  <h2>Änderungen dieser Erklärung</h2>
+  <p>
+    Diese Datenschutzerklärung kann bei Funktionsänderungen der App angepasst
+    werden. Die jeweils aktuelle Fassung ist unter dieser Adresse abrufbar.
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    Bei Fragen zum Datenschutz:
+    <a href="mailto:andi-w-apps@tuta.com">andi-w-apps@tuta.com</a>
+  </p>
+</body>
+</html>
