@@ -1,0 +1,37 @@
+# Baut die Skigebietsliste der App „Wetter AW“ jede Woche neu aus OpenSkiMap
+# (ODbL, © OpenStreetMap-Mitwirkende). Die App holt daten/ski_areas.tsv.gz
+# einmal im Monat; ohne Netz nimmt sie die eingebaute Liste.
+name: Skigebiete aktualisieren
+
+on:
+  schedule:
+    - cron: '23 4 * * 1' # montags 04:23 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  liste:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Liste aus OpenSkiMap bauen
+        run: python tools/make_ski_areas.py daten/ski_areas.tsv.gz --neu
+      - name: Liste prüfen (mindestens 1.000 Skigebiete)
+        run: |
+          python -c "import gzip; n = len(gzip.open('daten/ski_areas.tsv.gz').read().splitlines()); print(n, 'Skigebiete'); assert n >= 1000"
+      - name: Speichern, wenn sich etwas geändert hat
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daten/ski_areas.tsv.gz
+          if git diff --cached --quiet; then
+            echo "Keine Änderung"
+          else
+            git commit -m "Skigebiete aktualisiert (OpenSkiMap)"
+            git push
+          fi
